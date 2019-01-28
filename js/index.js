@@ -53,6 +53,26 @@ navSection[4].textContent = siteContent.nav["nav-item-5"];
 navSection[5].textContent = siteContent.nav["nav-item-6"];
 
 
+
+//append/prepend children
+const newAOne = document.createElement("a");
+const newATwo = document.createElement("a");
+const navNodeList = document.querySelector('nav');
+
+newAOne.textContent = "Append";
+newATwo.textContent = "Prepend";
+
+navNodeList.appendChild(newAOne);
+navNodeList.prepend(newATwo);
+newAOne.style.color = "green";
+newATwo.style.color = "green";
+
+navSection.forEach(x => x.style.color = "green");
+
+
+
+
+
 //logo
 const firstImg = document.getElementById('logo-img');
 firstImg.src = siteContent.nav["img-src"];
