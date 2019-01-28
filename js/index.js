@@ -88,6 +88,13 @@ buttonText.textContent = siteContent.cta["button"];
 headerImg.src = siteContent.cta["img-src"];
 
 
+buttonText.addEventListener("click", function(){
+  buttonText.style.backgroundColor = "gray";
+  buttonText.style.color = "white";
+  alert("done with an event listener...");
+});
+
+
 //main content
 
 const textContentOneHead = document.querySelector(".text-content:nth-child(1) h4");
