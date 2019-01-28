@@ -2,23 +2,39 @@ const secondTens = document.getElementById("secondTens");
 const secondOnes = document.getElementById("secondOnes");
 const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
-
+let clickCount = 0;
+let tensCounter = 0;
 
 const startButton = document.getElementById("startBTN");
+const resetButton = document.getElementById("resetBTN");
 
 startButton.addEventListener("click", myTimerFunc);
 startButton.addEventListener("click", function(){
     startButton.style.color = "white";
-    startButton.style.backgroundColor = "red";
+    startButton.style.backgroundColor = "green";
 });
 
-let clickCount = 0;
+resetButton.addEventListener("click", function(){
+    if(clickCount === 0){
+        clickCount = 0;
+        tensCounter = 0;
+        secondTens.innerHTML = tensCounter;
+        secondTens.classList.remove("redDigit")
+        secondOnes.classList.remove("redDigit")
+        msHundreds.classList.remove("redDigit")
+        msTens.classList.remove("redDigit");
+
+        }
+});
+
+
 
 function myTimerFunc(){
     
         //tens dosnt need to be elastic because
 
-    
+    tensCounter = 0;
+    secondTens.innerHTML = tensCounter;
     if(clickCount == 0){
         clickCount++;
         let tensCounter = 0;
@@ -33,6 +49,9 @@ function myTimerFunc(){
 
                 if(tensCounter === 1){
                     clearInterval(init1);
+                    clickCount = 0;
+                    startButton.style.color = "white";
+                    startButton.style.backgroundColor = "red";
                 }
         }
 
@@ -88,22 +107,6 @@ function myTimerFunc(){
             }
         }
         let init4 = setInterval(thousandsFunc, 10);
-
-
-
-
-            //clearing intervals
-        // function myStopFunction() {
-            // clearInterval(tenSecondsFunc);
-            // clearInterval(secondsFunc);
-            // clearInterval(hundredsFunc);
-            // clearInterval(thousandsFunc);
-        // }
-
-        // if(secondTens.innerHTML === 1){
-        //     myStopFunction() ;
-        // }
-
     }
 }
 

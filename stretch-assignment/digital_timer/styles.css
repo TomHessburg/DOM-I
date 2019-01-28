@@ -2,6 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: black;
 }
 
 .digit {
@@ -14,8 +15,7 @@ body {
 }
 
 body{
-  display: flex;
-  flex-direction: column-reverse;
+  height: 100vh;
 }
 
 #startBTN{
@@ -23,6 +23,7 @@ body{
   color:white;
   width: 130px;
   padding: 10px 0;
+  margin: 30px 0;
 }
 
 #startBTN:hover{
@@ -30,4 +31,28 @@ body{
   color:blue;
   cursor: pointer;
   
+}
+
+#resetBTN{
+  background: white;
+  color:black;
+  width: 100px;
+  padding: 8px 0;
+}
+
+#resetBTN:hover{
+  background: white;
+  color:blue;
+  cursor: pointer;
+}
+
+#card{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  padding: 30px;
 }
