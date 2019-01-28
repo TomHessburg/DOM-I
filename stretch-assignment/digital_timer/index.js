@@ -10,6 +10,11 @@ function myTimerFunc(){
         //tens dosnt need to be elastic because
     setInterval(function(){ 
         secondTens.innerHTML = 1;
+
+        secondTens.classList.add("redDigit")
+        secondOnes.classList.add("redDigit")
+        msHundreds.classList.add("redDigit")
+        msTens.classList.add("redDigit")
     }, 10000);
 
 
@@ -42,6 +47,7 @@ function myTimerFunc(){
             countMeThousand=0;
         }
     }, 10);
+
 
 }
 
