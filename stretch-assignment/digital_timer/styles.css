@@ -12,3 +12,22 @@ body {
 .redDigit {
   color: red;
 }
+
+body{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#startBTN{
+  background: blue;
+  color:white;
+  width: 130px;
+  padding: 10px 0;
+}
+
+#startBTN:hover{
+  background: white;
+  color:blue;
+  cursor: pointer;
+  
+}

@@ -2,7 +2,8 @@ const secondTens = document.getElementById("secondTens");
 const secondOnes = document.getElementById("secondOnes");
 const msHundreds = document.getElementById("msHundreds");
 const msTens = document.getElementById("msTens");
-
+const startButton = document.getElementById("startBTN");
+startButton.addEventListener("click", myTimerFunc)
 
 
 function myTimerFunc(){
@@ -97,4 +98,3 @@ function myTimerFunc(){
 
 
 
-myTimerFunc();
