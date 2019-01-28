@@ -43,19 +43,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 //nav section stuff!!
-const navSectionOne = document.querySelector("nav a:nth-child(1)");
-const navSectionTwo = document.querySelector("nav a:nth-child(2)");
-const navSectionThree = document.querySelector("nav a:nth-child(3)");
-const navSectionFour = document.querySelector("nav a:nth-child(4)");
-const navSectionFive = document.querySelector("nav a:nth-child(5)");
-const navSectionSix = document.querySelector("nav a:nth-child(6)");
+const navSection = document.querySelectorAll("nav a");
 
-navSectionOne.textContent = siteContent.nav["nav-item-1"];
-navSectionTwo.textContent = siteContent.nav["nav-item-2"];
-navSectionThree.textContent = siteContent.nav["nav-item-3"];
-navSectionFour.textContent = siteContent.nav["nav-item-4"];
-navSectionFive.textContent = siteContent.nav["nav-item-5"];
-navSectionSix.textContent = siteContent.nav["nav-item-6"];
+navSection[0].textContent = siteContent.nav["nav-item-1"];
+navSection[1].textContent = siteContent.nav["nav-item-2"];
+navSection[2].textContent = siteContent.nav["nav-item-3"];
+navSection[3].textContent = siteContent.nav["nav-item-4"];
+navSection[4].textContent = siteContent.nav["nav-item-5"];
+navSection[5].textContent = siteContent.nav["nav-item-6"];
 
 
 //logo
@@ -104,3 +99,22 @@ bottomContentTwoHead.innerHTML = siteContent["main-content"]["product-h4"];
 bottomContentTwoPar.innerHTML = siteContent["main-content"]["product-content"];
 bottomContentThreeHead.innerHTML = siteContent["main-content"]["vision-h4"];
 bottomContentThreePar.innerHTML = siteContent["main-content"]["vision-content"];
+
+
+
+
+//contact section
+const contactHeader = document.querySelector(".contact h4");
+const contactPar = document.querySelectorAll(".contact p");
+
+
+contactHeader.textContent = siteContent.contact["contact-h4"];
+contactPar[0].innerHTML = siteContent.contact["address"];
+contactPar[1].textContent = siteContent.contact["phone"];
+contactPar[2].textContent = siteContent.contact["email"];
+
+
+//footer
+const footerPar = document.querySelector("footer p");
+
+footerPar.textContent = siteContent.footer.copyright;
